@@ -37,4 +37,5 @@ map({ "n", "v" }, "<leader>sI", function()
     Util.format({ force = true })
 end, { desc = "Format" })
 
--- map("n", "<leader>e", "<cmd>Lex 30<CR>", { desc = "Save File" })
+map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
+map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
