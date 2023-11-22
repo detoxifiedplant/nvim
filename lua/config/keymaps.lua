@@ -16,6 +16,8 @@ map("v", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 -- map("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move Lines" })
 -- map("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move Lines" })
 
+map("n", "p", "p==", { desc = "Better Pasting" })
+map("n", "P", "P==", { desc = "Better Pasting" })
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dP', { desc = "Better Pasting" })
 
