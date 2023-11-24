@@ -1,12 +1,12 @@
 return {
     { "sar/darkplusplus.nvim", enabled = true },
     { "folke/tokyonight.nvim", enabled = true },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "darkplus",
-        },
-    },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "darkplus",
+    --     },
+    -- },
     {
         "folke/tokyonight.nvim",
         opts = {
