@@ -9,6 +9,7 @@ return {
 				mappings = {
 					["/"] = false,
 					["F"] = "fuzzy_finder",
+					["l"] = "open_drop",
 				}
 			}
 		}
