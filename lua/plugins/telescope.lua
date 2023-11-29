@@ -19,8 +19,8 @@ M.opts = {
     -- file_ignore_patterns = { ".git/", "node_modules" },
     mappings = {
       i = {
-        ["<Down>"] = actions.move_selection_next,
-        ["<Up>"] = actions.move_selection_previous,
+        -- ["<Down>"] = actions.move_selection_next,
+        -- ["<Up>"] = actions.move_selection_previous,
         ["<A-j>"] = actions.move_selection_next,
         ["<A-k>"] = actions.move_selection_previous,
       },
