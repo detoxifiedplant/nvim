@@ -33,6 +33,8 @@ map("n", "<A-w>", "<cmd>w<CR>", { desc = "Save File" })
 
 map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line" })
 map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selection" })
+map("n", "<leader>/", "gcc", { remap = true, silent = true, desc = "Comment line" })
+map("x", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment selection" })
 
 map({ "n", "v" }, "<leader>sI", function()
     Util.format({ force = true })
@@ -199,8 +201,8 @@ map("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right", remap = true })
 
 map("n", "<leader>fp", "<cmd>Telescope projects<cr>", { desc = "Find projects", remap = true })
+map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Grep (root dir)", remap = true })
 
--- map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
 -- map("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
 -- map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 -- map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
