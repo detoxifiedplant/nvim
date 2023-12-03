@@ -8,12 +8,6 @@ local map = vim.keymap.set
 map("i", "jk", "<esc>l", { desc = "Escape Mode" })
 map("n", "cw", "ciw", { desc = "Change Inside Word" })
 map("n", "cW", "ciW", { desc = "Change Inside WORD" })
--- map("n", "dw", "diw", { desc = "Yank Inside Word" })
--- map("n", "dW", "diW", { desc = "Yank Inside WORD" })
--- map("n", "yw", "yiw", { desc = "Yank Inside Word" })
--- map("n", "yW", "yiW", { desc = "Yank Inside WORD" })
--- map("n", "vw", "viw", { desc = "Visual Inside Word" })
--- map("n", "vW", "viW", { desc = "Visual Inside WORD" })
 
 map("n", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 map("n", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
@@ -41,18 +35,6 @@ map("x", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment selec
 map({ "n", "v" }, "<leader>sI", function()
     Util.format({ force = true })
 end, { desc = "Format" })
-
--- -- git
--- local gs = package.loaded.gitsigns
--- map("n", "<leader>gl", function() gs.blame_line({ full = true }) end, { desc = "Blame Line" })
--- map("n", "<leader>gD", function() gs.diffthis("~") end, { desc = "Difference This ~" })
--- map("n", "<leader>gd", gs.diffthis, { desc = "Difference This" })
--- map("n", "<leader>gp", gs.preview_hunk, { desc = "Preview Hunk" })
--- map("n", "<leader>gR", gs.reset_buffer, { desc = "Reset Buffer" })
--- map("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
--- map("n", "<leader>gS", gs.stage_buffer, { desc = "Stag Buffer" })
--- map("n", "<leader>gs", ":Gitsigns stage_hunk<CR>", { desc = "Stag Hunk" })
--- map("n", "<leader>gu", gs.undo_stage_hunk, { desc = "Undo Stag Hunk" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
@@ -82,9 +64,6 @@ map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
 map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
-
--- map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Lines" })
--- map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Lines" })
 
 -- map("n", "p", "p==", { desc = "Better Pasting" })
 -- map("n", "P", "P==", { desc = "Better Pasting" })
