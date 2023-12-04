@@ -29,8 +29,8 @@ map("n", "<A-w>", "<cmd>w<CR>", { desc = "Save File" })
 
 map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line" })
 map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selection" })
-map("n", "<leader>/", "gcc", { remap = true, silent = true, desc = "Comment line" })
-map("x", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment selection" })
+-- map("n", "<leader>/", "gcc", { remap = true, silent = true, desc = "Comment line" })
+-- map("x", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment selection" })
 
 map({ "n", "v" }, "<leader>sI", function()
     Util.format({ force = true })
