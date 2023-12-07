@@ -1,11 +1,18 @@
 return {
 	{ "sar/darkplusplus.nvim", enabled = true },
-	{ "catppuccin/nvim", enabled = true },
+	{ "catppuccin/nvim",
+		enabled = true,
+		config = function ()
+			require("catppuccin").setup({
+					transparent_background = true
+			})
+		end
+	},
 	{
 		"folke/tokyonight.nvim",
 		lazy = true,
 		opts = {
-			style = "moon",
+			style = "night",
 			transparent = true,
 			styles = {
 				sidebars = "transparent",

@@ -208,3 +208,12 @@ map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Grep (root dir)", 
 -- map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 -- map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 -- map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+-- TODO:
+-- FIX:
+-- HACK:
+-- WARN:
+-- PERF:
+-- NOTE:
+-- TEST:
+-- FIXIT:
+-- WARNING:
