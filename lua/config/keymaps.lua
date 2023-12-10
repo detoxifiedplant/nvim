@@ -10,8 +10,8 @@ map("n", "cw", "ciw", { desc = "Change Inside Word" })
 map("n", "cW", "ciW", { desc = "Change Inside WORD" })
 
 map("n", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("n", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 map("v", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
+map("x", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dP', { desc = "Better Pasting" })
@@ -25,6 +25,11 @@ map("n", "<leader>sp", ":norm vip<CR>", { desc = "Select Inside Paragraph" })
 map("n", "<leader>si", ":norm =i{<CR>", { desc = "Indent Inside Paragraph" })
 map("n", "<leader>sf", ":norm V$%<CR>", { desc = "Select Entire Function" })
 map("n", "<C-A-q>", "<cmd>q!<CR>", { desc = "Quit Without Saving" })
+map("v", "<C-A-q>", "<cmd>q!<CR>", { desc = "Quit Without Saving" })
+map("x", "<C-A-q>", "<cmd>q!<CR>", { desc = "Quit Without Saving" })
+map("n", "<A-q>", "<cmd>q<cr>", { desc = "Delete Buffer" })
+map("v", "<A-q>", "<cmd>q<cr>", { desc = "Delete Buffer" })
+map("x", "<A-q>", "<cmd>q<cr>", { desc = "Delete Buffer" })
 map("n", "<A-w>", "<cmd>w<CR>", { desc = "Save File" })
 
 map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line" })
@@ -38,6 +43,10 @@ end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
+
+map("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
+map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Markdown Preview" })
+map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown Preview" })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
