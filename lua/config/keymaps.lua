@@ -34,8 +34,6 @@ map("n", "<A-w>", "<cmd>w<CR>", { desc = "Save File" })
 
 map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line" })
 map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selection" })
--- map("n", "<leader>/", "gcc", { remap = true, silent = true, desc = "Comment line" })
--- map("x", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment selection" })
 
 map({ "n", "v" }, "<leader>sI", function()
     Util.format({ force = true })
@@ -43,8 +41,6 @@ end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
-
--- map("n", "<leader>mg", "<cmd>Glow<CR>", { desc = "Markdown Preview" })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -108,9 +104,6 @@ map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result
 map("i", ",", ",<c-g>u")
 map("i", ".", ".<c-g>u")
 map("i", ";", ";<c-g>u")
-
--- save file
--- map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 --keywordprg
 -- map("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
