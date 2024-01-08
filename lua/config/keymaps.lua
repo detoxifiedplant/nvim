@@ -19,6 +19,9 @@ map("x", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dP', { desc = "Better Pasting" })
 
+map("n", "<C-d>", "<C-d>zz", { desc = "Half Page Down" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Half Page Up" })
+
 map("x", "<A-j>", ":move '>+1<CR>gv-gv", { desc = "Move Lines" })
 map("x", "<A-k>", ":move '<-2<CR>gv-gv", { desc = "Move Lines" })
 map("x", "J", ":move '>+1<CR>gv-gv", { desc = "Move Lines" })
@@ -36,11 +39,12 @@ map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line
 map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selection" })
 
 map({ "n", "v" }, "<leader>sI", function()
-    Util.format({ force = true })
+  Util.format({ force = true })
 end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
+map("n", "<leader>cc", "<esc><cmd>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -86,10 +90,10 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsea
 -- Clear search, diff update and redraw
 -- taken from runtime/lua/_editor.lua
 map(
-    "n",
-    "<leader>ur",
-    "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
-    { desc = "Redraw / clear hlsearch / diff update" }
+  "n",
+  "<leader>ur",
+  "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+  { desc = "Redraw / clear hlsearch / diff update" }
 )
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
@@ -131,11 +135,11 @@ map("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
 
 -- diagnostic
 local diagnostic_goto = function(next, severity)
-    local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
-    severity = severity and vim.diagnostic.severity[severity] or nil
-    return function()
-        go({ severity = severity })
-    end
+  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+  severity = severity and vim.diagnostic.severity[severity] or nil
+  return function()
+    go({ severity = severity })
+  end
 end
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 map("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
