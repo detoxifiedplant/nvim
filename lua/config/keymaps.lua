@@ -44,7 +44,16 @@ end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
-map("n", "<leader>cc", "<esc><cmd>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
+-- map("n", "<leader>cc", "<esc><cmd>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
+map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
+
+map("i", "<C-u>", "<esc>bvUgi", { desc = "Toggle the first letter into Upper Case" })
+map("i", "<C-a>", "<C-Left>", { desc = "Moves cursor left in normal mode" })
+map("i", "<C-l>", "<C-Right>", { desc = "Moves cursor right in normal mode" })
+map("i", "<C-e>", "<Esc>ea", { desc = "Moves cursor right in normal mode" })
+-- map("i", "<C-b>", "<C-o>b", { desc = "Toggle the first letter into Upper Case" })
+-- map("i", "<C-l>", "<C-o>w", { desc = "Toggle the first letter into Upper Case" })
+-- map("i", "<C-e>", "<C-o>e", { desc = "Toggle the first letter into Upper Case" })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

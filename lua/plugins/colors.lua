@@ -1,8 +1,8 @@
 return {
   { "sar/darkplusplus.nvim", enabled = true },
-  { "EdenEast/nightfox.nvim", enabled = true },
   { "kepano/flexoki", enabled = true },
   { "rebelot/kanagawa.nvim", enabled = true },
+  -- { "EdenEast/nightfox.nvim", enabled = true },
   -- { "sainnhe/everforest", enabled = true },
   -- { "bluz71/vim-nightfly-colors", enabled = true },
   -- { "ellisonleao/gruvbox.nvim", enabled = true },
