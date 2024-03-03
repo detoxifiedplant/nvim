@@ -47,6 +47,8 @@ map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
 -- map("n", "<leader>cc", "<esc><cmd>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
 map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
+map("n", "<leader>fd", "<cmd>DevdocsOpen<CR>", { desc = "Open Devdocs" })
+
 map("i", "<C-u>", "<esc>bv~gi", { desc = "Toggle the first letter into Upper Case" })
 map("i", "<C-b>", "<C-Left>", { desc = "Moves cursor left in normal mode" })
 map("i", "<C-l>", "<C-Right>", { desc = "Moves cursor right in normal mode" })
