@@ -16,8 +16,8 @@ map("n", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 map("v", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 map("x", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 
-map("v", "p", '"_dp', { desc = "Better Pasting" })
-map("v", "P", '"_dP', { desc = "Better Pasting" })
+map("v", "p", '"_dP', { desc = "Better Pasting" })
+map("v", "P", '"_dp', { desc = "Better Pasting" })
 
 map("n", "<C-d>", "<C-d>zz", { desc = "Half Page Down" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half Page Up" })
