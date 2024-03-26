@@ -7,10 +7,10 @@ return {
   -- { "ellisonleao/gruvbox.nvim", enabled = true },
   -- { "nyoom-engineering/oxocarbon.nvim", enabled = true }, WARN:
   -- { "sainnhe/sonokai", enabled = true }, WARN:
-	-- { "rmehri01/onenord.nvim", enabled = true }, WARN:
-	-- { "kartikp10/noctis.nvim", enabled = true }, WARN:
-	-- { "AlexvZyl/nordic.nvim", lazy = false, priority = 1000,
-	-- config = function() require("nordic").load() end, },WARN:
+  -- { "rmehri01/onenord.nvim", enabled = true }, WARN:
+  -- { "kartikp10/noctis.nvim", enabled = true }, WARN:
+  -- { "AlexvZyl/nordic.nvim", lazy = false, priority = 1000,
+  -- config = function() require("nordic").load() end, },WARN:
   -- { "mcchrish/zenbones.nvim", enabled = true },WARN:
   -- { "sainnhe/everforest", enabled = true },WARN:
   -- { "EdenEast/nightfox.nvim", enabled = true }, WARN:
@@ -25,7 +25,12 @@ return {
     enabled = true,
     config = function()
       require("catppuccin").setup({
-        transparent_background = true,
+        flavour = "latte",
+        transparent_background = false,
+        background = {
+          light = "latte",
+          dark = "mocha",
+        },
       })
     end,
   },
@@ -33,20 +38,21 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      style = "night",
+      style = "day",
+      -- style = "night",
       -- transparent = true,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
-        -- functions = { italic = true },
-        -- variables = { italic = true },
+        functions = { italic = true },
+        variables = { italic = true },
       },
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
 }
