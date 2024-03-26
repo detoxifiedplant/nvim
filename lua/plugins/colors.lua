@@ -50,6 +50,25 @@ return {
     },
   },
   {
+    "Tsuzat/NeoSolarized.nvim",
+    enabled = true,
+    config = function()
+      require("NeoSolarized").setup({
+        style = "light",
+        transparent = false,
+        styles = {
+          comments = { italic = false },
+          keywords = { italic = true },
+          functions = { bold = true },
+          variables = {},
+          string = { italic = false },
+          underline = true, -- true/false; for global underline
+          undercurl = true, -- true/false; for global undercurl
+        },
+      })
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
