@@ -31,6 +31,26 @@ return {
           light = "latte",
           dark = "mocha",
         },
+				-- dim_inactive = {
+				-- 	enabled = true, -- dims the background color of inactive window
+				-- 	shade = "dark",
+				-- 	percentage = 0.75, -- percentage of the shade to apply to the inactive window
+				-- },
+				styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+						comments = {}, -- Change the style of comments
+						conditionals = { "italic" },
+						loops = { "bold" },
+						functions = { "italic" },
+						keywords = { "bold"},
+						strings = {},
+						variables = {},
+						numbers = {},
+						booleans = { "bold" },
+						properties = {},
+						types = {},
+						operators = {},
+						-- miscs = {}, -- Uncomment to turn off hard-coded styles
+				},
       })
     end,
   },
@@ -44,9 +64,12 @@ return {
       styles = {
         sidebars = "transparent",
         floats = "transparent",
-        functions = { italic = true },
-        variables = { italic = true },
+        functions = { bold = true },
+        keywords = { bold = true },
+        comments = { italic = false, bold = false },
+        -- variables = { italic = false },
       },
+      day_brightness = 0.2, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
     },
   },
   {
