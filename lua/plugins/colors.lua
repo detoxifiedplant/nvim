@@ -58,7 +58,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      style = "day",
+      style = "night",
       -- style = "night",
       -- transparent = true,
       styles = {
