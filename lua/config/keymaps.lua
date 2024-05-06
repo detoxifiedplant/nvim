@@ -48,6 +48,10 @@ map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
 map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
 map("n", "<leader>fd", "<cmd>DevdocsOpen<CR>", { desc = "Open Devdocs" })
+map("n", "<leader>co", "<cmd>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
+
+map("n", "<leader>r", "<cmd>Neotree buffers float<CR>", { desc = "Toggle Colorizer" })
+map("n", "<leader>a", "$%", { desc = "End of the Function" })
 
 map("i", "<C-u>", "<esc>bv~gi", { desc = "Toggle the first letter into Upper Case" })
 map("i", "<C-b>", "<C-Left>", { desc = "Moves cursor left in normal mode" })

@@ -31,26 +31,26 @@ return {
           light = "latte",
           dark = "mocha",
         },
-				-- dim_inactive = {
-				-- 	enabled = true, -- dims the background color of inactive window
-				-- 	shade = "dark",
-				-- 	percentage = 0.75, -- percentage of the shade to apply to the inactive window
-				-- },
-				styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-						comments = {}, -- Change the style of comments
-						conditionals = { "italic" },
-						loops = { "bold" },
-						functions = { "italic" },
-						keywords = { "bold"},
-						strings = {},
-						variables = {},
-						numbers = {},
-						booleans = { "bold" },
-						properties = {},
-						types = {},
-						operators = {},
-						-- miscs = {}, -- Uncomment to turn off hard-coded styles
-				},
+        -- dim_inactive = {
+        -- 	enabled = true, -- dims the background color of inactive window
+        -- 	shade = "dark",
+        -- 	percentage = 0.75, -- percentage of the shade to apply to the inactive window
+        -- },
+        styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+          comments = {}, -- Change the style of comments
+          conditionals = { "italic" },
+          loops = { "bold" },
+          functions = { "bold" },
+          keywords = { "bold" },
+          strings = {},
+          variables = {},
+          numbers = {},
+          booleans = { "bold" },
+          properties = { "italic" },
+          types = {},
+          operators = {},
+          -- miscs = {}, -- Uncomment to turn off hard-coded styles
+        },
       })
     end,
   },
@@ -94,7 +94,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }
