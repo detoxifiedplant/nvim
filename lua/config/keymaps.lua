@@ -53,6 +53,8 @@ map("n", "<leader>co", "<cmd>ColorizerToggle<CR>", { desc = "Toggle Colorizer" }
 map("n", "<leader>r", "<cmd>Neotree buffers float<CR>", { desc = "Toggle Colorizer" })
 map("n", "<leader>a", "$%", { desc = "End of the Function" })
 
+map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resule Telescope Search" })
+
 map("i", "<C-u>", "<esc>bv~gi", { desc = "Toggle the first letter into Upper Case" })
 map("i", "<C-b>", "<C-Left>", { desc = "Moves cursor left in normal mode" })
 map("i", "<C-l>", "<C-Right>", { desc = "Moves cursor right in normal mode" })
