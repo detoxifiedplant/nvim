@@ -9,12 +9,12 @@ map("i", "jk", "<esc>l", { desc = "Escape Mode" })
 map("n", "cw", "ciw", { desc = "Change Inside Word" })
 map("n", "cW", "ciW", { desc = "Change Inside WORD" })
 
-map("n", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("v", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("x", "<S-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("n", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("v", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-map("x", "<A-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
+map("n", "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map("v", "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map("x", "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map("n", "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map("v", "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map("x", "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
 
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dp', { desc = "Better Pasting" })
@@ -30,10 +30,10 @@ map("x", "K", ":move '<-2<CR>gv-gv", { desc = "Move Lines" })
 map("n", "<leader>sp", ":norm vip<CR>", { desc = "Select Inside Paragraph" })
 map("n", "<leader>si", ":norm =i{<CR>", { desc = "Indent Inside Paragraph" })
 map("n", "<leader>sf", ":norm V$%<CR>", { desc = "Select Entire Function" })
-map("n", "<C-A-q>", "<cmd>q<CR>", { desc = "Quit Without Saving" })
-map("v", "<C-A-q>", "<cmd>q<CR>", { desc = "Quit Without Saving" })
-map("x", "<C-A-q>", "<cmd>q<CR>", { desc = "Quit Without Saving" })
-map("n", "<A-w>", "<cmd>w<CR>", { desc = "Save File" })
+map("n", "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
+map("v", "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
+map("x", "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
+map("n", "<A-w>", "<CMD>w<CR>", { desc = "Save File" })
 
 map("n", "<leader>;", "gcc", { remap = true, silent = true, desc = "Comment line" })
 map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selection" })
@@ -44,13 +44,13 @@ end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
--- map("n", "<leader>cc", "<esc><cmd>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
+-- map("n", "<leader>cc", "<esc><CMD>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
 map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
-map("n", "<leader>fd", "<cmd>DevdocsOpen<CR>", { desc = "Open Devdocs" })
-map("n", "<leader>co", "<cmd>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
+map("n", "<leader>fd", "<CMD>DevdocsOpen<CR>", { desc = "Open Devdocs" })
+map("n", "<leader>co", "<CMD>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
 
-map("n", "<leader>r", "<cmd>Neotree buffers float<CR>", { desc = "Toggle Colorizer" })
+map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Toggle Colorizer" })
 map("n", "<leader>a", "$%", { desc = "End of the Function" })
 
 map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resule Telescope Search" })
@@ -76,40 +76,40 @@ map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+map("n", "<C-Up>", "<CMD>resize +2<CR>", { desc = "InCRease window height" })
+map("n", "<C-Down>", "<CMD>resize -2<CR>", { desc = "DeCRease window height" })
+map("n", "<C-Left>", "<CMD>vertical resize -2<CR>", { desc = "DeCRease window width" })
+map("n", "<C-Right>", "<CMD>vertical resize +2<CR>", { desc = "InCRease window width" })
 
 -- Move Lines
-map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+map("n", "<A-j>", "<CMD>m .+1<CR>==", { desc = "Move down" })
+map("n", "<A-k>", "<CMD>m .-2<CR>==", { desc = "Move up" })
+map("i", "<A-j>", "<esc><CMD>m .+1<CR>==gi", { desc = "Move down" })
+map("i", "<A-k>", "<esc><CMD>m .-2<CR>==gi", { desc = "Move up" })
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move down" })
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move up" })
 
 -- map("n", "p", "p==", { desc = "Better Pasting" })
 -- map("n", "P", "P==", { desc = "Better Pasting" })
--- map("n", "<leader>h", "<cmd>noh<cr>", { desc = "Remove Highlited Search" })
+-- map("n", "<leader>h", "<CMD>noh<CR>", { desc = "Remove Highlited Search" })
 
 -- buffers
-map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
--- map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
--- map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
-map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+map("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Prev buffer" })
+map("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Next buffer" })
+-- map("n", "[b", "<CMD>bprevious<CR>", { desc = "Prev buffer" })
+-- map("n", "]b", "<CMD>bnext<CR>", { desc = "Next buffer" })
+map("n", "<leader>bb", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
+map("n", "<leader>`", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
 
 -- Clear search with <esc>
-map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+map({ "i", "n" }, "<esc>", "<CMD>noh<CR><esc>", { desc = "Escape and clear hlsearch" })
 
 -- Clear search, diff update and redraw
 -- taken from runtime/lua/_editor.lua
 map(
   "n",
   "<leader>ur",
-  "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+  "<CMD>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
   { desc = "Redraw / clear hlsearch / diff update" }
 )
 
@@ -127,23 +127,23 @@ map("i", ".", ".<c-g>u")
 map("i", ";", ";<c-g>u")
 
 --keywordprg
--- map("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
+-- map("n", "<leader>K", "<CMD>norm! K<CR>", { desc = "Keywordprg" })
 
 -- better indenting
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- lazy
-map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>l", "<CMD>Lazy<CR>", { desc = "Lazy" })
 
 -- new file
-map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+map("n", "<leader>fn", "<CMD>enew<CR>", { desc = "New File" })
 
-map("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
-map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
+map("n", "<leader>xl", "<CMD>lopen<CR>", { desc = "Location List" })
+map("n", "<leader>xq", "<CMD>copen<CR>", { desc = "Quickfix List" })
 
-map("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix" })
-map("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
+map("n", "[q", vim.CMD.cprev, { desc = "Previous quickfix" })
+map("n", "]q", vim.CMD.cnext, { desc = "Next quickfix" })
 
 -- formatting
 -- map({ "n", "v" }, "<leader>cf", function()
@@ -189,7 +189,7 @@ map("n", "<leader>gg", function() Util.terminal({ "lazygit" }, { cwd = Util.root
 map("n", "<leader>gG", function() Util.terminal({ "lazygit" }, {esc_esc = false, ctrl_hjkl = false}) end, { desc = "Lazygit (cwd)" })
 
 -- quit
-map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+map("n", "<leader>qq", "<CMD>qa<CR>", { desc = "Quit all" })
 
 -- highlights under cursor
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
@@ -206,12 +206,12 @@ map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- Terminal Mappings
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
-map("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
-map("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
-map("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
-map("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
-map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
-map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
+map("t", "<C-h>", "<CMD>winCMD h<CR>", { desc = "Go to left window" })
+map("t", "<C-j>", "<CMD>winCMD j<CR>", { desc = "Go to lower window" })
+map("t", "<C-k>", "<CMD>winCMD k<CR>", { desc = "Go to upper window" })
+map("t", "<C-l>", "<CMD>winCMD l<CR>", { desc = "Go to right window" })
+map("t", "<C-/>", "<CMD>close<CR>", { desc = "Hide Terminal" })
+map("t", "<c-_>", "<CMD>close<CR>", { desc = "which_key_ignore" })
 
 -- windows
 map("n", "<leader>ww", "<C-W>p", { desc = "Other window", remap = true })
@@ -221,14 +221,14 @@ map("n", "<leader>w|", "<C-W>v", { desc = "Split window right", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right", remap = true })
 
-map("n", "<leader>fp", "<cmd>Telescope projects<cr>", { desc = "Find projects", remap = true })
+map("n", "<leader>fp", "<CMD>Telescope projects<CR>", { desc = "Find projects", remap = true })
 map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Grep (root dir)", remap = true })
 
--- map("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
--- map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
--- map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
--- map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
--- map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+-- map("n", "<leader><tab>f", "<CMD>tabfirst<CR>", { desc = "First Tab" })
+-- map("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New Tab" })
+-- map("n", "<leader><tab>]", "<CMD>tabnext<CR>", { desc = "Next Tab" })
+-- map("n", "<leader><tab>d", "<CMD>tabclose<CR>", { desc = "Close Tab" })
+-- map("n", "<leader><tab>[", "<CMD>tabprevious<CR>", { desc = "Previous Tab" })
 -- TODO:
 -- FIX:
 -- HACK:
