@@ -1,8 +1,9 @@
 return {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   { "rebelot/kanagawa.nvim", enabled = true },
-  { "NLKNguyen/papercolor-theme", enabled = true },
+  { "ryanoasis/vim-devicons", enabled = true },
 
+  -- { "NLKNguyen/papercolor-theme", enabled = true },
   -- { "sar/darkplusplus.nvim", enabled = true },
   -- { "ellisonleao/gruvbox.nvim", enabled = true },
   -- { "nyoom-engineering/oxocarbon.nvim", enabled = true }, WARN:
