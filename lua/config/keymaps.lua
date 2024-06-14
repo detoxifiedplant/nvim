@@ -44,13 +44,12 @@ end, { desc = "Format" })
 
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
--- map("n", "<leader>cc", "<esc><CMD>norm b~e <CR>", { desc = "Toggle the first letter into Upper Case" })
-map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
+-- map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
 map("n", "<leader>fd", "<CMD>DevdocsOpen<CR>", { desc = "Open Devdocs" })
 map("n", "<leader>co", "<CMD>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
 
-map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Toggle Colorizer" })
+map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Buffer List" })
 map("n", "<leader>a", "$%", { desc = "End of the Function" })
 
 map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resume Telescope Search" })
@@ -59,9 +58,6 @@ map("i", "<C-u>", "<esc>bv~gi", { desc = "Toggle the first letter into Upper Cas
 map("i", "<C-b>", "<C-Left>", { desc = "Moves cursor left in normal mode" })
 map("i", "<C-l>", "<C-Right>", { desc = "Moves cursor right in normal mode" })
 map("i", "<C-e>", "<Esc>ea", { desc = "Moves cursor right in normal mode" })
--- map("i", "<C-b>", "<C-o>b", { desc = "Toggle the first letter into Upper Case" })
--- map("i", "<C-l>", "<C-o>w", { desc = "Toggle the first letter into Upper Case" })
--- map("i", "<C-e>", "<C-o>e", { desc = "Toggle the first letter into Upper Case" })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -222,7 +218,7 @@ map("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right", remap = true })
 
 map("n", "<leader>fp", "<CMD>Telescope projects<CR>", { desc = "Find projects", remap = true })
-map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Grep (root dir)", remap = true })
+-- map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Grep (root dir)", remap = true })
 
 -- map("n", "<leader><tab>f", "<CMD>tabfirst<CR>", { desc = "First Tab" })
 -- map("n", "<leader><tab><tab>", "<CMD>tabnew<CR>", { desc = "New Tab" })
