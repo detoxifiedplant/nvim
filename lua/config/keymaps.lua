@@ -46,11 +46,11 @@ map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
 -- map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
-map("n", "<leader>fd", "<CMD>DevdocsOpen<CR>", { desc = "Open Devdocs" })
+map("n", "<leader>fd", "<CMD>DevdocsOpenFloat<CR>", { desc = "Open Devdocs" })
 map("n", "<leader>co", "<CMD>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
 
 map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Buffer List" })
-map("n", "<leader>a", "$%", { desc = "End of the Function" })
+map({ "n", "x", "v" }, "<leader>a", "$%", { desc = "End of the Function" })
 
 map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resume Telescope Search" })
 
