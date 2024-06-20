@@ -1,7 +1,7 @@
 return {
+	{ "ryanoasis/vim-devicons", enabled = true },
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   -- { "rebelot/kanagawa.nvim", enabled = true },
-  { "ryanoasis/vim-devicons", enabled = true },
   -- { "ellisonleao/gruvbox.nvim", enabled = true },
 
   -- { "NLKNguyen/papercolor-theme", enabled = true },
@@ -73,25 +73,25 @@ return {
       day_brightness = 0.2, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
     },
   },
-  {
-    "Tsuzat/NeoSolarized.nvim",
-    enabled = true,
-    config = function()
-      require("NeoSolarized").setup({
-        style = "light",
-        transparent = false,
-        styles = {
-          comments = { italic = false },
-          keywords = { italic = true },
-          functions = { bold = true },
-          variables = {},
-          string = { italic = false },
-          underline = true, -- true/false; for global underline
-          undercurl = true, -- true/false; for global undercurl
-        },
-      })
-    end,
-  },
+  -- {
+  --   "Tsuzat/NeoSolarized.nvim",
+  --   enabled = true,
+  --   config = function()
+  --     require("NeoSolarized").setup({
+  --       style = "light",
+  --       transparent = false,
+  --       styles = {
+  --         comments = { italic = false },
+  --         keywords = { italic = true },
+  --         functions = { bold = true },
+  --         variables = {},
+  --         string = { italic = false },
+  --         underline = true, -- true/false; for global underline
+  --         undercurl = true, -- true/false; for global undercurl
+  --       },
+  --     })
+  --   end,
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
