@@ -32,8 +32,8 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move up" })
 
 -- custom
-map("n", "<leader>sp", ":norm vip<CR>", { desc = "Select Inside Paragraph" })
-map("n", "<leader>sf", ":norm V$%<CR>", { desc = "Select Entire Function" })
+map("n", "<leader>sp", "Vip", { desc = "Select Inside Paragraph" })
+map("n", "<leader>sf", "V$%", { desc = "Select Entire Function" })
 map("n", "<leader>fd", "<CMD>DevdocsOpenFloat<CR>", { desc = "Open Devdocs" })
 map("n", "<leader>co", "<CMD>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
 map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Buffer List" })

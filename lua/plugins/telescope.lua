@@ -9,7 +9,7 @@ local M = {
   },
 }
 
-local actions = require "telescope.actions"
+local actions = require("telescope.actions")
 
 M.opts = {
   defaults = {
@@ -17,6 +17,9 @@ M.opts = {
     -- selection_caret = " ",
     path_display = { "smart" },
     -- file_ignore_patterns = { ".git/", "node_modules" },
+    layout_strategy = "horizontal",
+    layout_config = { height = 0.95, width = 0.9, preview_width = 65 },
+    winblend = 0,
     mappings = {
       i = {
         -- ["<Down>"] = actions.move_selection_next,
@@ -29,4 +32,3 @@ M.opts = {
 }
 
 return M
-
