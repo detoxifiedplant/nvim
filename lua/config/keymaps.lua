@@ -60,7 +60,7 @@ end, { desc = "Format" })
 -- capitalize
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
 map("n", "<leader>uU", "gUiw", { desc = "Toggle the word into Upper Case" })
-map("i", "<C-u>", "<esc>bv~gi", { desc = "Toggle the first letter into Upper Case" })
+map("i", "<C-u>", "<Esc>b~gi", { desc = "Toggle the first letter into Upper Case" })
 -- map("n", "<leader>cc", "b~e", { desc = "Toggle the first letter into Upper Case" })
 
 -- insert mode commands
