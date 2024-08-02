@@ -7,7 +7,7 @@ return {
     -- "nvim-tree/nvim-web-devicons", -- optional dependency
   },
   opts = {
-   show_dirname = false,
-   show_basename = false,
-	},
+    show_dirname = false,
+    show_basename = false,
+  },
 }
