@@ -90,7 +90,8 @@ map("n", "<C-Right>", "<CMD>vertical resize +2<CR>", { desc = "InCRease window w
 map("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bb", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>`", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
+map("n", "<C-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
+map("n", "<A-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<CMD>noh<CR><esc>", { desc = "Escape and clear hlsearch" })

@@ -23,7 +23,7 @@ local M = {
       options = {
         component_separators = "|",
         section_separators = { left = "", right = "" },
-        theme = "auto",
+        theme = "iceberg_light",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
       },
@@ -43,7 +43,7 @@ local M = {
             },
           },
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { LazyVim.lualine.pretty_path() },
+          -- { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
             -- stylua: ignore
@@ -95,7 +95,8 @@ local M = {
         },
         lualine_z = {
           function()
-            return " " .. os.date("%R")
+            -- return " " .. os.date("%R")
+            return os.date("%R")
           end,
         },
       },
