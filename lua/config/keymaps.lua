@@ -40,6 +40,14 @@ map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Buffer List" }
 map({ "n", "x", "v" }, "<leader>a", "$%", { desc = "End of the Function" })
 map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resume Telescope Search" })
 map("n", "<leader>fp", "<CMD>Telescope projects<CR>", { desc = "Find projects", remap = true })
+map("n", "<leader>fF", ":lua search_home()<CR>", { desc = "Find in Home", remap = true })
+
+function search_home()
+    require('telescope.builtin').find_files({
+        cwd = "~/",
+        hidden = false
+    })
+end
 
 -- save and quit
 map({"n", "v", "x"}, "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })

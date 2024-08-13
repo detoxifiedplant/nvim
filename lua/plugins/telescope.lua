@@ -22,8 +22,6 @@ M.opts = {
     winblend = 0,
     mappings = {
       i = {
-        -- ["<Down>"] = actions.move_selection_next,
-        -- ["<Up>"] = actions.move_selection_previous,
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
       },
