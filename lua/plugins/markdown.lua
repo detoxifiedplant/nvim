@@ -4,9 +4,9 @@ local M = {
 	ft = { "markdown" },
 	build = function() vim.fn["mkdp#util#install"]() end,
 	keys = {
-		{ "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Markdown Preview" },
-		{ "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", desc = "Markdown Preview Stop" },
-		{ "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", desc = "Markdown Preview Toggle" },
+		{ "<leader>mp", "<Plug>MarkdownPreview", desc = "Markdown Preview" },
+		{ "<leader>ms", "<Plug>MarkdownPreviewStop", desc = "Markdown Preview Stop" },
+		{ "<leader>mt", "<Plug>MarkdownPreviewToggle", desc = "Markdown Preview Toggle" },
 	}
 }
 

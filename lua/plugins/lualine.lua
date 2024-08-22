@@ -23,7 +23,8 @@ local M = {
       options = {
         component_separators = "|",
         section_separators = { left = "", right = "" },
-        theme = "iceberg_light",
+        theme = "base16",
+        -- theme = "iceberg_light",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
       },

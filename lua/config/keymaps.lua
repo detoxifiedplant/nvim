@@ -17,6 +17,14 @@ map({"n", "v", "x"}, "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dp', { desc = "Better Pasting" })
 
+map({"n","x"}, "p", "<Plug>(YankyPutAfter)")
+map({"n","x"}, "P", "<Plug>(YankyPutBefore)")
+map({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
+map({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
+map("n", "<c-y>", "<CMD>YankyRingHistory<CR>")
+map("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
+map("n", "<c-n>", "<Plug>(YankyNextEntry)")
+
 -- page down while setting cursor in middle
 map("n", "<C-d>", "<C-d>zz", { desc = "Half Page Down" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half Page Up" })

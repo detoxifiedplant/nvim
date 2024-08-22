@@ -1,3 +1,4 @@
+vim.opt.background = "light"
 return {
 	{ "ryanoasis/vim-devicons", enabled = true },
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
