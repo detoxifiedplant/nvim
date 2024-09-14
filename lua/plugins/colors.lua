@@ -4,9 +4,9 @@ return {
   { "ryanoasis/vim-devicons", enabled = true },
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   -- { "rebelot/kanagawa.nvim", enabled = true },
-  -- { "ellisonleao/gruvbox.nvim", enabled = true },
 
   -- { "NLKNguyen/papercolor-theme", enabled = true },
+  -- { "ellisonleao/gruvbox.nvim", enabled = true },
   -- { "sar/darkplusplus.nvim", enabled = true },
   -- { "nyoom-engineering/oxocarbon.nvim", enabled = true }, WARN:
   -- { "sainnhe/sonokai", enabled = true }, WARN:
@@ -38,13 +38,13 @@ return {
           dark = "mocha",
         },
         dim_inactive = {
-          enabled = true, -- dims the background color of inactive window
+          enabled = false, -- dims the background color of inactive window
           shade = "dark",
           percentage = 0.15, -- percentage of the shade to apply to the inactive window
         },
         styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-          comments = { "italic" },
-          functions = { "bold" },
+          comments = { "altfont" },
+          -- functions = { "bold" },
           keywords = { "italic" },
           -- operators = { "bold" },
           -- conditionals = { "bold" },
@@ -116,7 +116,7 @@ return {
           semantic_tokens = true,
           symbols_outline = false,
           telekasten = false,
-          telescope = { enabled = true, style = "nvchad" },
+          telescope = { enabled = true },
           treesitter_context = true,
           ts_rainbow = false,
           vim_sneak = false,
@@ -214,8 +214,8 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      style = "moon",
-      transparent = true,
+      style = "night",
+      transparent = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",

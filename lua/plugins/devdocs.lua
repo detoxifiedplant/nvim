@@ -13,6 +13,7 @@ return {
     },
     after_open = function(bufnr)
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<Esc>", ":close<CR>", {})
+      vim.api.nvim_buf_set_keymap(bufnr, "n", "q", ":close<CR>", {})
     end,
   },
 }
