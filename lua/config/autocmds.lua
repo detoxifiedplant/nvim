@@ -96,4 +96,15 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
---
+
+-- otions for TS and JS files
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("TS_JS"),
+  pattern = { "typescript", "javascript" },
+  callback = function()
+    vim.opt_local.tabstop = 4
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.expandtab = false
+  end,
+})
+
