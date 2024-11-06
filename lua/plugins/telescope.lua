@@ -25,7 +25,7 @@ M.opts = {
 		-- 		return { height = 0.95, width = 0.9, preview_width = 65 }
 		-- 	end
 		-- end,
-    layout_config = { height = 0.95, width = 0.9, preview_width = 65 },
+    layout_config = { height = 0.95, width = 0.9, }, -- preview_width = 65 },
     winblend = 0,
     mappings = {
       i = {

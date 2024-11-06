@@ -10,12 +10,27 @@ map("n", "cw", "ciw", { desc = "Change Inside Word" })
 map("n", "cW", "ciW", { desc = "Change Inside WORD" })
 
 -- delete buffer
-map({"n", "v", "x"}, "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
-map({"n", "v", "x"}, "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map({ "n", "v", "x" }, "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
+map({ "n", "v", "x" }, "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
 
 -- better pasting
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dp', { desc = "Better Pasting" })
+
+-- DAP
+map("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+map("n", "<Leader>dj", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+map("n", "<Leader>dk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+map("n", "<Leader>dc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+map("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
+map(
+  "n",
+  "<Leader>dd",
+  "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+  { desc = "Debugger set conditional breakpoint" }
+)
+map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
 
 -- map({"n","x"}, "p", "<Plug>(YankyPutAfter)")
 -- map({"n","x"}, "P", "<Plug>(YankyPutBefore)")
@@ -51,14 +66,14 @@ map("n", "<leader>fp", "<CMD>Telescope projects<CR>", { desc = "Find projects", 
 map("n", "<leader>fF", ":lua search_home()<CR>", { desc = "Find in Home", remap = true })
 
 function search_home()
-    require('telescope.builtin').find_files({
-        cwd = "~/",
-        hidden = false
-    })
+  require("telescope.builtin").find_files({
+    cwd = "~/",
+    hidden = false,
+  })
 end
 
 -- save and quit
-map({"n", "v", "x"}, "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
+map({ "n", "v", "x" }, "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
 map("n", "<A-w>", "<CMD>w<CR>", { desc = "Save File" })
 map("n", "<leader>qq", "<CMD>qa<CR>", { desc = "Quit all" })
 map("n", "<leader>fn", "<CMD>enew<CR>", { desc = "New File" })
@@ -121,9 +136,13 @@ map("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result
 map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 
 -- floating terminal
-local lazyterm = function() Util.terminal(nil, { cwd = Util.root() }) end
+local lazyterm = function()
+  Util.terminal(nil, { cwd = Util.root() })
+end
 map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function() Util.terminal() end, { desc = "Terminal (cwd)" })
+map("n", "<leader>fT", function()
+  Util.terminal()
+end, { desc = "Terminal (cwd)" })
 map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
 map("t", "<C-/>", "<CMD>close<CR>", { desc = "Hide Terminal" })
 
@@ -175,24 +194,52 @@ map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
 -- toggle options
-map("n", "<leader>uf", function() Util.format.toggle() end, { desc = "Toggle auto format (global)" })
-map("n", "<leader>uF", function() Util.format.toggle(true) end, { desc = "Toggle auto format (buffer)" })
-map("n", "<leader>us", function() Util.toggle("spell") end, { desc = "Toggle Spelling" })
-map("n", "<leader>uw", function() Util.toggle("wrap") end, { desc = "Toggle Word Wrap" })
-map("n", "<leader>uL", function() Util.toggle("relativenumber") end, { desc = "Toggle Relative Line Numbers" })
-map("n", "<leader>ul", function() Util.toggle.number() end, { desc = "Toggle Line Numbers" })
-map("n", "<leader>ud", function() Util.toggle.diagnostics() end, { desc = "Toggle Diagnostics" })
+map("n", "<leader>uf", function()
+  Util.format.toggle()
+end, { desc = "Toggle auto format (global)" })
+map("n", "<leader>uF", function()
+  Util.format.toggle(true)
+end, { desc = "Toggle auto format (buffer)" })
+map("n", "<leader>us", function()
+  Util.toggle("spell")
+end, { desc = "Toggle Spelling" })
+map("n", "<leader>uw", function()
+  Util.toggle("wrap")
+end, { desc = "Toggle Word Wrap" })
+map("n", "<leader>uL", function()
+  Util.toggle("relativenumber")
+end, { desc = "Toggle Relative Line Numbers" })
+map("n", "<leader>ul", function()
+  Util.toggle.number()
+end, { desc = "Toggle Line Numbers" })
+map("n", "<leader>ud", function()
+  Util.toggle.diagnostics()
+end, { desc = "Toggle Diagnostics" })
 local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
-map("n", "<leader>uc", function() Util.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Toggle Conceal" })
+map("n", "<leader>uc", function()
+  Util.toggle("conceallevel", false, { 0, conceallevel })
+end, { desc = "Toggle Conceal" })
 if vim.lsp.inlay_hint then
-  map("n", "<leader>uh", function() vim.lsp.inlay_hint(0, nil) end, { desc = "Toggle Inlay Hints" })
+  map("n", "<leader>uh", function()
+    vim.lsp.inlay_hint(0, nil)
+  end, { desc = "Toggle Inlay Hints" })
 end
 
-map("n", "<leader>uT", function() if vim.b.ts_highlight then vim.treesitter.stop() else vim.treesitter.start() end end, { desc = "Toggle Treesitter Highlight" })
+map("n", "<leader>uT", function()
+  if vim.b.ts_highlight then
+    vim.treesitter.stop()
+  else
+    vim.treesitter.start()
+  end
+end, { desc = "Toggle Treesitter Highlight" })
 
 -- lazygit
-map("n", "<leader>gg", function() Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false }) end, { desc = "Lazygit (root dir)" })
-map("n", "<leader>gG", function() Util.terminal({ "lazygit" }, {esc_esc = false, ctrl_hjkl = false}) end, { desc = "Lazygit (cwd)" })
+map("n", "<leader>gg", function()
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazygit (root dir)" })
+map("n", "<leader>gG", function()
+  Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazygit (cwd)" })
 
 -- highlights under cursor
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
