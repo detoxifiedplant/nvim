@@ -3,21 +3,6 @@ local transparent_background = true
 local M = {
   { "rebelot/kanagawa.nvim", enabled = true },
   { "ryanoasis/vim-devicons", enabled = true },
-  {
-    "EdenEast/nightfox.nvim",
-    enabled = true,
-    opts = function()
-      require("nightfox").setup({
-        specs = {
-          duskfox = {
-            syntax = {
-              builtin0 = "#c6a0f6",
-            },
-          },
-        },
-      })
-    end,
-  },
 
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   -- { "NLKNguyen/papercolor-theme", enabled = true },
@@ -37,6 +22,65 @@ local M = {
   -- { "savq/melange-nvim", enabled = true }, WARN:
   -- { "navarasu/onedark.nvim", enabled = true }, WARN:
   -- { "jacoborus/tender.vim", enabled = true }, WARN:
+  {
+    "EdenEast/nightfox.nvim",
+    enabled = true,
+    opts = function()
+      require("nightfox").setup({
+        options = {
+          styles = {
+            -- keywords = "italic",
+          },
+        },
+        palettes = {
+          duskfox = {
+            -- bg0 = "#191726", -- Dark bg (status line and float)
+            bg1 = "#1e2021", -- Default bg
+            -- bg2 = "#2d2a45", -- Lighter bg (colorcolm folds)
+            -- bg3 = "#373354", -- Lighter bg (cursor line)
+            -- bg4 = "#4b4673", -- Conceal, border fg
+            -- sel0    = "#433c59", -- Popup bg, visual selection bg
+          },
+        },
+        specs = {
+          duskfox = {
+            syntax = {
+              -- builtin0 = "#b4befe",
+              -- builtin0 = "#78A9FF",
+              builtin0 = "#e8bf8b", -- Builtin variable
+              -- builtin1 = "#B5E8E0",          -- Builtin type
+              -- builtin2 = "#B5E8E0",          -- Builtin const
+              -- builtin3 = "#B5E8E0",          -- Not used
+              -- bracket = "#B5E8E0",           -- Brackets and Punctuation
+              -- comment = "#B5E8E0",           -- Comment
+              -- conditional = "#B5E8E0",       -- Conditional and loop
+              -- const = "#B5E8E0",             -- Constants, imports and booleans
+              -- dep = "#B5E8E0",               -- Deprecated
+              field = "#65b1cd", -- Field
+              -- func = "#B5E8E0",              -- Functions and Titles
+              -- ident = "#B5E8E0",             -- Identifiers
+              -- keyword = "#B5E8E0",           -- Keywords
+              -- number = "#B5E8E0",            -- Numbers
+              -- operator = "#B5E8E0",          -- Operators
+              -- preproc = "#B5E8E0",           -- PreProc
+              -- regex = "#B5E8E0",             -- Regex
+              -- statement = "#B6E8E0",         -- Statements
+              string = "#629f99", -- Strings
+              type = "#a5adcb", -- Types
+              variable = "#cdd6f4", -- Variables
+            },
+            diag = {
+              error = "#dd7878",
+              -- warn = "#DDB6F2",
+              -- info = pal.blue.base,
+              -- hint = pal.green.base,
+              -- ok = pal.green.base,
+            },
+          },
+        },
+      })
+    end,
+  },
   {
     "catppuccin/nvim",
     lazy = false,
@@ -143,7 +187,7 @@ local M = {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    -- lazy = false,
     opts = {
       style = "night",
       transparent = false,

@@ -193,38 +193,6 @@ map("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
--- toggle options
-map("n", "<leader>uf", function()
-  Util.format.toggle()
-end, { desc = "Toggle auto format (global)" })
-map("n", "<leader>uF", function()
-  Util.format.toggle(true)
-end, { desc = "Toggle auto format (buffer)" })
-map("n", "<leader>us", function()
-  Util.toggle("spell")
-end, { desc = "Toggle Spelling" })
-map("n", "<leader>uw", function()
-  Util.toggle("wrap")
-end, { desc = "Toggle Word Wrap" })
-map("n", "<leader>uL", function()
-  Util.toggle("relativenumber")
-end, { desc = "Toggle Relative Line Numbers" })
-map("n", "<leader>ul", function()
-  Util.toggle.number()
-end, { desc = "Toggle Line Numbers" })
-map("n", "<leader>ud", function()
-  Util.toggle.diagnostics()
-end, { desc = "Toggle Diagnostics" })
-local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
-map("n", "<leader>uc", function()
-  Util.toggle("conceallevel", false, { 0, conceallevel })
-end, { desc = "Toggle Conceal" })
-if vim.lsp.inlay_hint then
-  map("n", "<leader>uh", function()
-    vim.lsp.inlay_hint(0, nil)
-  end, { desc = "Toggle Inlay Hints" })
-end
-
 map("n", "<leader>uT", function()
   if vim.b.ts_highlight then
     vim.treesitter.stop()
