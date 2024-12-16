@@ -135,15 +135,16 @@ map("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev search r
 map("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 
--- floating terminal
-local lazyterm = function()
-  Util.terminal(nil, { cwd = Util.root() })
+-- terminal
+local snaketerm = function()
+  Snacks.terminal(nil, { position = "right", cwd = Util.root() })
 end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
+map("n", "<leader>ft", snaketerm, { desc = "Terminal (root dir)" })
 map("n", "<leader>fT", function()
   Util.terminal()
 end, { desc = "Terminal (cwd)" })
-map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
+map("n", "<c-/>", snaketerm, { desc = "Terminal (Root Dir)" })
+-- map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
 map("t", "<C-/>", "<CMD>close<CR>", { desc = "Hide Terminal" })
 
 -- windows
