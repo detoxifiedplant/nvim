@@ -1,9 +1,9 @@
 vim.opt.background = "dark"
 local transparent_background = true
 local M = {
-  { "rebelot/kanagawa.nvim", enabled = true },
-  { "ryanoasis/vim-devicons", enabled = true },
+  -- { "ryanoasis/vim-devicons", enabled = true },
 
+  -- { "rebelot/kanagawa.nvim", enabled = true },
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   -- { "NLKNguyen/papercolor-theme", enabled = true },
   -- { "ellisonleao/gruvbox.nvim", enabled = true },
@@ -84,7 +84,7 @@ local M = {
   },
   {
     "catppuccin/nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     name = "catppuccin",
     config = function()
