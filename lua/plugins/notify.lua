@@ -8,10 +8,10 @@ return {
       end,
       desc = "Dismiss all Notifications",
     },
-		{ "<leader>un", false }
+    { "<leader>un", false },
   },
   opts = {
     timeout = 3000,
-	stages = 'static'
+    stages = "static",
   },
 }
