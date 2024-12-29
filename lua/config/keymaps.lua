@@ -31,14 +31,6 @@ map(
 map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
 map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
 
--- map({"n","x"}, "p", "<Plug>(YankyPutAfter)")
--- map({"n","x"}, "P", "<Plug>(YankyPutBefore)")
--- map({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
--- map({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
--- map("n", "<c-y>", "<CMD>YankyRingHistory<CR>")
--- map("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
--- map("n", "<c-n>", "<Plug>(YankyNextEntry)")
-
 -- page down while setting cursor in middle
 map("n", "<C-d>", "<C-d>zz", { desc = "Half Page Down" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half Page Up" })
@@ -56,20 +48,12 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move up" })
 -- custom
 map("n", "<leader>sp", "Vip", { desc = "Select Inside Paragraph" })
 map("n", "<leader>sf", "V$%", { desc = "Select Entire Function" })
-map("n", "<leader>fd", "<CMD>DevdocsOpenFloat<CR>", { desc = "Open Devdocs" })
 map("n", "<leader>co", "<CMD>ColorizerToggle<CR>", { desc = "Toggle Colorizer" })
 map("n", "<leader>r", "<CMD>Neotree buffers float<CR>", { desc = "Buffer List" })
 map({ "n", "x", "v" }, "<leader>a", "$%", { desc = "End of the Function" })
-map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resume Telescope Search" })
 map("n", "<leader>fp", "<CMD>Telescope projects<CR>", { desc = "Find projects", remap = true })
-map("n", "<leader>fF", ":lua search_home()<CR>", { desc = "Find in Home", remap = true })
-
-function search_home()
-  require("telescope.builtin").find_files({
-    cwd = "~/",
-    hidden = false,
-  })
-end
+-- map("n", "<leader>fd", "<CMD>DevdocsOpenFloat<CR>", { desc = "Open Devdocs" })
+-- map("n", "<leader>fl", "<CMD>Telescope resume<CR>", { desc = "Resume Telescope Search" })
 
 -- save and quit
 map({ "n", "v", "x" }, "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
@@ -145,9 +129,9 @@ map("n", "<leader>ft", function()
   Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })
 map("n", "<c-/>", function()
----@diagnostic disable-next-line: missing-fields
-  Snacks.terminal.open(nil, { win = { position = "right" } })
+  Snacks.terminal.open(nil, { cwd = LazyVim.root(), win = { position = "right" } })
 end, { desc = "Terminal (Root Dir)" })
+-- map("n", "<c-/>", ":lua Snacks.terminal.open(nil, { win = { position = 'right' }})<CR>", { desc = "Terminal (Root Dir)" })
 
 -- Terminal Mappings
 map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })

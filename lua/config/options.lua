@@ -9,14 +9,18 @@ vim.g.maplocalleader = "\\"
 
 -- Enable LazyVim auto format
 vim.g.autoformat = false
-
+vim.g.snacks_animate = false
+vim.g.lazyvim_picker = "auto"
+vim.g.lazyvim_cmp = "auto"
+-- if the completion engine supports the AI source,
+-- use that instead of inline suggestions
+vim.g.ai_cmp = true
 -- LazyVim root dir detection
 -- Each entry can be:
 -- * the name of a detector function like `lsp` or `cwd`
 -- * a pattern or array of patterns like `.git` or `lua`.
 -- * a function with signature `function(buf) -> string|string[]`
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
-
 
 opt.autowrite = true -- Enable auto write
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
