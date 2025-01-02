@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local Util = require("lazyvim.util")
 local map = vim.keymap.set
 
 map("i", "jk", "<esc>l", { desc = "Escape Mode" })
@@ -68,9 +67,9 @@ map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selec
 
 -- indenting
 map("n", "<leader>si", ":norm =a{<CR>", { desc = "Indent Inside Paragraph" })
-map({ "n", "v" }, "<leader>sI", function()
-  Util.format({ force = true })
-end, { desc = "Format" })
+-- map({ "n", "v" }, "<leader>sI", function()
+--   Util.format({ force = true })
+-- end, { desc = "Format" })
 
 -- capitalize
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
@@ -119,26 +118,19 @@ map("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev search r
 map("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
 
+-- Terminal Mappings
+-- local snackterm = function ()
+--   Snacks.terminal.open(nil, {win = { position = "right"}})
+-- end
 -- terminal
-local snaketerm = function()
-  Snacks.terminal(nil, { position = "right", cwd = Util.root() })
-end
-map("n", "<leader>ft", snaketerm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function()
-  Snacks.terminal(nil, { position = "right", cwd = Util.root() })
-end, { desc = "Terminal (cwd)" })
-map("n", "<c-/>", snaketerm, { desc = "Terminal (Root Dir)" })
--- map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
-map("t", "<C-/>", "<CMD>close<CR>", { desc = "Hide Terminal" })
+map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
 map("n", "<leader>ft", function()
   Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })
 map("n", "<c-/>", function()
-  Snacks.terminal.open(nil, { cwd = LazyVim.root(), win = { position = "right" } })
+  ---@diagnostic disable-next-line: missing-fields
+  Snacks.terminal.open(nil, { win = { position = "right" } })
 end, { desc = "Terminal (Root Dir)" })
--- map("n", "<c-/>", ":lua Snacks.terminal.open(nil, { win = { position = 'right' }})<CR>", { desc = "Terminal (Root Dir)" })
-
--- Terminal Mappings
 map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
 -- windows
@@ -195,14 +187,6 @@ map("n", "<leader>uT", function()
     vim.treesitter.start()
   end
 end, { desc = "Toggle Treesitter Highlight" })
-
--- lazygit
-map("n", "<leader>gg", function()
-  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
-end, { desc = "Lazygit (root dir)" })
-map("n", "<leader>gG", function()
-  Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false })
-end, { desc = "Lazygit (cwd)" })
 
 -- highlights under cursor
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
