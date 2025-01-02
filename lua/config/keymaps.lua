@@ -67,9 +67,6 @@ map("x", "<leader>;", "gc", { remap = true, silent = true, desc = "Comment selec
 
 -- indenting
 map("n", "<leader>si", ":norm =a{<CR>", { desc = "Indent Inside Paragraph" })
--- map({ "n", "v" }, "<leader>sI", function()
---   Util.format({ force = true })
--- end, { desc = "Format" })
 
 -- capitalize
 map("n", "<leader>uu", "guiw", { desc = "Toggle the word into Lower Case" })
