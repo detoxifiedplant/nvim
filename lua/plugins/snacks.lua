@@ -9,7 +9,12 @@ return {
     statuscolumn = { enabled = false }, -- we set this in options.lua
     toggle = { map = LazyVim.safe_keymap_set },
     words = { enabled = true },
-    -- terminal = { win = { position = "right", width = 0.4 } },
+    terminal = {
+      win = {
+        position = "float",
+        width = 0.9,
+      },
+    },
     dashboard = {
       preset = {
         header = [[
