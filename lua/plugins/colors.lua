@@ -3,7 +3,6 @@ local transparent_background = true
 local M = {
   -- { "rebelot/kanagawa.nvim", enabled = true },
   -- { "ryanoasis/vim-devicons", enabled = true },
-
   -- { "rebelot/kanagawa.nvim", enabled = true },
   -- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   -- { "NLKNguyen/papercolor-theme", enabled = true },
@@ -49,7 +48,6 @@ local M = {
             syntax = {
               -- builtin0 = "#b4befe",
               -- builtin0 = "#78A9FF",
-              -- builtin0 = "#e8bf8b", -- Builtin variable
               builtin0 = "#90b1b1", -- Builtin variable
               -- builtin1 = "#B5E8E0",          -- Builtin type
               -- builtin2 = "#B5E8E0",          -- Builtin const
@@ -71,7 +69,7 @@ local M = {
               -- statement = "#B6E8E0",         -- Statements
               string = "#629f99", -- Strings
               type = "#a5adcb", -- Types
-              variable = "#cdd6f4", -- Variables
+              variable = "#c5c8c6",
             },
             diag = {
               error = "#dd7878",
@@ -166,7 +164,6 @@ local M = {
           navic = { enabled = false },
           neogit = false,
           neotest = false,
-          neotree = { enabled = false, show_root = true, transparent_panel = false },
           noice = false,
           notify = true,
           nvimtree = true,
