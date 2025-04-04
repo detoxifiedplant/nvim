@@ -35,10 +35,10 @@ local M = {
         palettes = {
           duskfox = {
             -- bg0 = "#191726", -- Dark bg (status line and float)
-            bg0 = "#1e2021", -- Default bg
-            bg1 = "#1e2021", -- Default bg
+            bg0 = "#202020", -- Default bg
+            bg1 = "#202020", -- Default bg
             -- bg2 = "#2d2a45", -- Lighter bg (colorcolm folds)
-            -- bg3 = "#373354", -- Lighter bg (cursor line)
+            bg3 = "#363a4f", -- Lighter bg (cursor line)
             -- bg4 = "#4b4673", -- Conceal, border fg
             -- sel0    = "#433c59", -- Popup bg, visual selection bg
           },
