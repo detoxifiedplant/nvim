@@ -58,6 +58,7 @@ map("n", "<leader>ff", "<CMD>FzfLua files cwd=~/<CR>", { desc = "Resume Telescop
 -- save and quit
 map({ "n", "v", "x" }, "<C-A-q>", "<CMD>q<CR>", { desc = "Quit Without Saving" })
 map("n", "<A-w>", "<CMD>w<CR>", { desc = "Save File" })
+map("n", "<C-s>", "<CMD>w<CR>", { desc = "Save File" })
 map("n", "<leader>qq", "<CMD>qa<CR>", { desc = "Quit all" })
 map("n", "<leader>fn", "<CMD>enew<CR>", { desc = "New File" })
 
@@ -101,8 +102,8 @@ map("n", "<C-Right>", "<CMD>vertical resize +2<CR>", { desc = "InCRease window w
 map("n", "<S-h>", "<CMD>bprevious<CR>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bb", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
-map("n", "<C-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
-map("n", "<A-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
+-- map("n", "<C-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
+-- map("n", "<A-s>", "<CMD>e #<CR>", { desc = "Switch to Other Buffer" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<CMD>noh<CR><esc>", { desc = "Escape and clear hlsearch" })
@@ -124,10 +125,12 @@ map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd
 map("n", "<leader>ft", function()
   Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })
-map("n", "<c-/>", function()
-  ---@diagnostic disable-next-line: missing-fields
-  Snacks.terminal.open(nil, { win = { position = "right" } })
+map("n", "<C-/>", function()
+  Snacks.terminal(nil, { cwd = LazyVim.root() })
 end, { desc = "Terminal (Root Dir)" })
+-- map("n", "<c-/>", function()
+--   Snacks.terminal.open(nil, { win = { position = "right" } })
+-- end, { desc = "Terminal (Root Dir)" })
 map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
 -- windows

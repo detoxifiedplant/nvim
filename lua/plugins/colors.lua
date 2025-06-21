@@ -64,12 +64,14 @@ local M = {
               -- keyword = "#B5E8E0",           -- Keywords
               -- number = "#B5E8E0",            -- Numbers
               -- operator = "#B5E8E0",          -- Operators
-              -- preproc = "#B5E8E0",           -- PreProc
+              preproc = "#9aaaa9",           -- PreProc
               -- regex = "#B5E8E0",             -- Regex
               -- statement = "#B6E8E0",         -- Statements
               string = "#629f99", -- Strings
               type = "#a5adcb", -- Types
               variable = "#c5c8c6",
+              -- type = "#8988bd", -- Types
+              -- variable = "#817e96",
             },
             diag = {
               error = "#dd7878",

@@ -23,6 +23,12 @@ vim.g.ai_cmp = true
 -- * a function with signature `function(buf) -> string|string[]`
 vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 
+-- ~/.config/nvim/lua/config/highlights.lua
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })       -- for inactive windows
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })    -- for floating windows
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })    -- optional, match background
+
 opt.autowrite = true -- Enable auto write
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"
@@ -58,7 +64,7 @@ opt.splitbelow = true -- Put new windows below current
 opt.splitkeep = "screen"
 opt.splitright = true -- Put new windows right of current
 opt.tabstop = tabwidth -- Number of spaces tabs count for
-opt.termguicolors = false -- True color support
+opt.termguicolors = true -- True color support
 opt.timeoutlen = 300
 opt.undofile = true
 opt.undolevels = 10000
