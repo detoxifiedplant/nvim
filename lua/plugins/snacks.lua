@@ -44,7 +44,7 @@ return {
       sections = {
         {
           section = "terminal",
-          cmd = "chafa ~/pictures/wallpapers/shree_krushna.jpg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
+          cmd = "chafa ~/Pictures/krishna/Krishna_tells_Gita_to_Arjuna-1536x1106.jpeg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
           height = 17,
           padding = 1,
         },

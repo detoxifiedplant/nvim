@@ -164,6 +164,9 @@ map("n", "<leader>xq", "<CMD>copen<CR>", { desc = "Quickfix List" })
 map("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix" })
 map("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
 
+-- date insert
+map("i", "<leader>ddi", vim.fn.strftime('%d-%m-%Y'), { desc = "Insert today's date" })
+
 -- diagnostic
 local diagnostic_goto = function(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
