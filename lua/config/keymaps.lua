@@ -8,6 +8,9 @@ map("i", "jk", "<esc>l", { desc = "Escape Mode" })
 map("n", "cw", "ciw", { desc = "Change Inside Word" })
 map("n", "cW", "ciW", { desc = "Change Inside WORD" })
 
+-- disable macro recording, too easy to trigger by accident
+map("n", "q", "<Nop>", { desc = "Disable Macro Recording" })
+
 -- delete buffer
 map({ "n", "v", "x" }, "<S-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
 map({ "n", "v", "x" }, "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
@@ -15,6 +18,7 @@ map({ "n", "v", "x" }, "<A-q>", "<CMD>bdelete<CR>", { desc = "Delete Buffer" })
 -- better pasting
 map("v", "p", '"_dP', { desc = "Better Pasting" })
 map("v", "P", '"_dp', { desc = "Better Pasting" })
+map("n", "<Leader>pp", '"0p', { desc = "Paste Last Yank" })
 
 -- DAP
 map("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
